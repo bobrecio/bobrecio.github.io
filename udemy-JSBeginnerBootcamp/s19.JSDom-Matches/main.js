@@ -1,4 +1,5 @@
-var cardsArray = [{
+var cardsArray = [
+    {
         'name': 'CSS',
         'img': 'https://github.com/robgmerrill/img/blob/master/css3-logo.png?raw=true',
     },
@@ -66,6 +67,13 @@ var grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
 // Append the grid section to the game-board div
 game.appendChild(grid);
+// grag the div to show the number of guesses
+var guessCountDisplay = document.getElementById('guesses');
+var matchCountDisplay = document.getElementById('matches');
+
+var highScore = (localStorage.getItem('highScore') > 0) ? localStorage.getItem('highScore') : 0;
+var highScoreDisplay = document.getElementById('highScore');
+highScoreDisplay.innerText = highScore;
 
 // Loop through each item in our cards array
 for (i = 0; i < gameGrid.length; i++) {
@@ -93,7 +101,8 @@ for (i = 0; i < gameGrid.length; i++) {
 
 var firstGuess = '';
 var secondGuess = '';
-// Set count to 0
+var guessCount = 0;
+var matchCount = 0;
 var count = 0;
 var previousTarget = null;
 var delay = 1200;
@@ -145,14 +154,22 @@ grid.addEventListener('click', function (event) {
         }
         // If both guesses are not empty
         if (firstGuess !== '' && secondGuess !== '') {
+            guessCount++;
             // And the firstGuess matches secondGuess
             if (firstGuess === secondGuess) {
                 // Run the match function
                 setTimeout(match, delay);
                 setTimeout(resetGuesses, delay);
+                matchCount++;
+                matchCountDisplay.innerText = `${matchCount} of ${gameGrid.length/2} matched`;
+                if (matchCount === gameGrid.length/2 && guessCount < highScore){
+                    highScoreDisplay.innerText = guessCount;
+                    localStorage.setItem('highScore', guessCount);
+                }
             } else {
                 setTimeout(resetGuesses, delay);
             }
+            guessCountDisplay.innerText = guessCount;
         }
         previousTarget = clicked;
     }
