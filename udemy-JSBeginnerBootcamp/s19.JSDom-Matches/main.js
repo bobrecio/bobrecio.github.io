@@ -71,9 +71,12 @@ game.appendChild(grid);
 var guessCountDisplay = document.getElementById('guesses');
 var matchCountDisplay = document.getElementById('matches');
 
-var highScore = (localStorage.getItem('highScore') > 0) ? localStorage.getItem('highScore') : 0;
+var highScore = (localStorage.getItem('highScore') > 0) ? localStorage.getItem('highScore') : 9999;
 var highScoreDisplay = document.getElementById('highScore');
-highScoreDisplay.innerText = highScore;
+var displayHighScore = function(thisScore){
+    highScoreDisplay.innerText = (thisScore !== 9999) ? `${thisScore} is your best` :'No high score';
+}
+displayHighScore(highScore);
 
 // Loop through each item in our cards array
 for (i = 0; i < gameGrid.length; i++) {
@@ -163,7 +166,7 @@ grid.addEventListener('click', function (event) {
                 matchCount++;
                 matchCountDisplay.innerText = `${matchCount} of ${gameGrid.length/2} matched`;
                 if (matchCount === gameGrid.length/2 && guessCount < highScore){
-                    highScoreDisplay.innerText = guessCount;
+                    displayHighScore(guessCount);
                     localStorage.setItem('highScore', guessCount);
                 }
             } else {
