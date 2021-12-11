@@ -67,11 +67,11 @@ var grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
 // Append the grid section to the game-board div
 game.appendChild(grid);
-// grag the div to show the number of guesses
+// grab the div to show the number of guesses
 var guessCountDisplay = document.getElementById('guesses');
 var matchCountDisplay = document.getElementById('matches');
 
-var highScore = (localStorage.getItem('highScore') > 0) ? localStorage.getItem('highScore') : 9999;
+var highScore = (localStorage.getItem('highScore')) ? localStorage.getItem('highScore') : 9999;
 var highScoreDisplay = document.getElementById('highScore');
 var displayHighScore = function(thisScore){
     highScoreDisplay.innerText = (thisScore !== 9999) ? `${thisScore} is your best` :'No high score';
