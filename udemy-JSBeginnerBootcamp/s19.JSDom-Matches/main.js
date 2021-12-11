@@ -30,6 +30,7 @@ var cardsArray = [{
         'name': 'Python',
         'img': 'https://github.com/robgmerrill/img/blob/master/python-logo.png?raw=true',
     },
+/*
     {
         'name': 'Ruby',
         'img': 'https://github.com/robgmerrill/img/blob/master/rails-logo.png?raw=true',
@@ -38,6 +39,7 @@ var cardsArray = [{
         'name': 'Sass',
         'img': 'https://github.com/robgmerrill/img/blob/master/sass-logo.png?raw=true',
     },
+ */   
     {
         'name': 'Sublime',
         'img': 'https://github.com/robgmerrill/img/blob/master/sublime-logo.png?raw=true',
