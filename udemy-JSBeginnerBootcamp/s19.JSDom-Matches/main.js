@@ -51,7 +51,7 @@ var cardsArray = [
         'img': 'https://github.com/robgmerrill/img/blob/master/wordpress-logo.png?raw=true',
     },
 ];
-var numberOfCards = 12;//document.getElementsById('numSets').value; // the grid is 4-wide; so muliples of 4 are best
+var numberOfCards = 20;//document.getElementsById('numSets').value; // the grid is 4-wide; so muliples of 4 are best
 var acCardsArray = [];
 var imgCol = null;
 var imgRow = null;
