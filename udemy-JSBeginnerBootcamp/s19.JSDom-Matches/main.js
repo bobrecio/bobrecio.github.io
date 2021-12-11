@@ -1,5 +1,5 @@
 var cardsArray = [
-    {
+    /*{
         'name': 'CSS',
         'img': 'https://github.com/robgmerrill/img/blob/master/css3-logo.png?raw=true',
     },
