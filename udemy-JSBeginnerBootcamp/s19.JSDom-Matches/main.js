@@ -31,6 +31,7 @@ var cardsArray = [
         'name': 'Python',
         'img': 'https://github.com/robgmerrill/img/blob/master/python-logo.png?raw=true',
     },
+*/
 /*
     {
         'name': 'Ruby',
