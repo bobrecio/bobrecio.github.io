@@ -10,7 +10,7 @@ body {
 }
 
 .grid {
-    max-width: 960px;
+    max-width: 250px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -27,8 +27,8 @@ body {
 .card,
 .back,
 .front {
-    height: 150px;
-    width: 150px;
+    height: 50px;
+    width: 50px;
 }
 
 .back,
