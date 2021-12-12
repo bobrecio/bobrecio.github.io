@@ -51,9 +51,30 @@ var cardsArray = [
         'img': 'https://github.com/robgmerrill/img/blob/master/wordpress-logo.png?raw=true',
     },
 ];
+var numberOfCards = 8;//document.getElementsById('numSets').value; // the grid is 4-wide; so muliples of 4 are best
+var acCardsArray = [];
+var imgCol = null;
+var imgRow = null;
+
+var mkAcCardsArray = function(){
+    for (i = 0; i < numberOfCards/2; i++){
+        var thisCard = {};
+        imgCol = Math.floor(Math.random() * 29);
+        imgRow = Math.floor(Math.random() * 14);
+
+        var pxRight = (imgCol * 128) + imgCol + 3;
+        var pxTop = (imgRow * 128) + imgRow + 3;
+
+        thisCard.name = `${pxRight}|${pxTop}`;
+        thisCard.img = `url('ac.png') -${pxRight}px -${pxTop}px`;
+        //console.log(thisCard);
+        acCardsArray.push(thisCard);
+    }
+}
+mkAcCardsArray();
 
 // Duplicate cardsArray to create a match for each card
-var gameGrid = cardsArray.concat(cardsArray);
+var gameGrid = acCardsArray.concat(acCardsArray);//cardsArray.concat(cardsArray);
 
 // Randomize game grid on each load
 gameGrid.sort(function () {
@@ -95,7 +116,7 @@ for (i = 0; i < gameGrid.length; i++) {
     // Create back of card
     var back = document.createElement('div');
     back.classList.add('back');
-    back.style.backgroundImage = `url(${gameGrid[i].img})`;
+    back.style.background = `${gameGrid[i].img}`;
 
     // Append card to grid
     grid.appendChild(card);
