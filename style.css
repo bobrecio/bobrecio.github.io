@@ -48,7 +48,7 @@ body {
 
 .back {
     /*transform: rotateY(180deg);*/
-    transform: rotate3d(1,1,1);
+    transform: rotate3d(0,1,0,180deg);
     background-color: #6589F9;
     background-size: contain;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@ body {
 
 .selected {
     /*transform: rotateY(180deg);*/
-    transform: rotate3d(1,1,1);
+    transform: rotate3d(0,1,0,180deg);
 }
 
 .match .front {
