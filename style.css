@@ -31,7 +31,7 @@ body {
 .front {
     height: 125px;
     width: 125px;
-    border-radius: 2px;
+    border-radius: 15px;
 }
 
 .back,
@@ -42,7 +42,6 @@ body {
 
 .front {
     z-index: 2;
-    border-radius: 15px;
     background: #FAB942 url('./ac-leaf.png') no-repeat center center / contain;
 }
 
