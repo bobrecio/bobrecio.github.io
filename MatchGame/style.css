@@ -42,11 +42,13 @@ body {
 
 .front {
     z-index: 2;
+    border-radius: 15px;
     background: #FAB942 url('./ac-leaf.png') no-repeat center center / contain;
 }
 
 .back {
-    transform: rotateY(180deg);
+    /*transform: rotateY(180deg);*/
+    transform: rotate3d(1,1,1,180deg);
     background-color: #6589F9;
     background-size: contain;
     background-repeat: no-repeat;
@@ -54,7 +56,8 @@ body {
 }
 
 .selected {
-    transform: rotateY(180deg);
+    /*transform: rotateY(180deg);*/
+    transform: rotate3d(1,1,1,180deg);
 }
 
 .match .front {
