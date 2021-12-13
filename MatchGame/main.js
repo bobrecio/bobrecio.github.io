@@ -13,7 +13,7 @@ var mkAcCardsArray = function(){
         var pxTop = (imgRow * 128) + imgRow + 3;
 
         thisCard.name = `${pxRight}|${pxTop}`;
-        thisCard.img = `url('ac.png') -${pxRight}px -${pxTop}px`;
+        thisCard.img = `url('./ac.png') -${pxRight}px -${pxTop}px`;
         //console.log(thisCard);
         acCardsArray.push(thisCard);
     }
