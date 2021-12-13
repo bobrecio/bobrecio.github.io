@@ -5,4 +5,4 @@
 ---
 
 ## Apps
-### - [Matching Game](./udemy-JSBeginnerBootcamp/s19.JSDom-Matches/index.html)
+### - [Matching Game](./MatchGame/index.html)
